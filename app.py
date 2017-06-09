@@ -75,6 +75,13 @@ def predict():
 		#convert the response to a string
 		response = np.array_str(np.argmax(out,axis=1))
 		return response	
+	
 
 if __name__ == "__main__":
-    application.run()
+	#decide what port to run the app in
+	#port = int(os.environ.get('PORT', 5000))
+	#run the app locally on the givn port
+	#app.run(host='0.0.0.0', port=port)
+	app.run(host='0.0.0.0')
+	#optional if we want to run in debugging mode
+	#app.run(debug=True)
